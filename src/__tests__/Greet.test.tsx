@@ -2,8 +2,9 @@ import {render, screen} from '@testing-library/react'
 import Greet from 'components/Greet'
 
 
-describe("Greet Component", () => {
-    test('render value of the name prop if given', () => {
+describe("Greet Component", (): void => {
+
+    test('render value of the name prop if given', (): void => {
         const name = 'Arjun'
         render(<Greet name={name} />)
         const textContent: HTMLElement = screen.getByText(`Hello, ${name}`)
